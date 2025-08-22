@@ -47,7 +47,7 @@ Plugins will install automatically on first run.
 
 - Neovim 0.9+
 - git
-- (A Nerd Font (for icons))[https://www.nerdfonts.com/font-downloads]
+- [A Nerd Font (for icons)](https://www.nerdfonts.com/font-downloads)
 - Node.js (for Copilot)
 
 ## 🤝 Contributing
