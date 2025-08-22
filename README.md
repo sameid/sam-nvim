@@ -62,5 +62,5 @@ MIT License
 
 ## Special Thanks
 
-- (Josean Martinez)[https://github.com/josean-dev]
-- (LazyVim)[https://github.com/LazyVim]
+- [LazyVim](https://github.com/LazyVim)
+- [Josean Martinez](https://github.com/josean-dev)
