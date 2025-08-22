@@ -35,21 +35,6 @@ return {
 				async = false,
 				timeout_ms = 1000,
 			},
-			-- formatters = {
-			-- 	prettier = {
-			-- 		command = vim.fn.expand("./node_modules/.bin/prettier"), -- local project bin
-			-- 		args = {
-			-- 			"--stdin-filepath",
-			-- 			"$FILENAME",
-			-- 		},
-			-- 		cwd = require("conform.util").root_file({
-			-- 			".prettierrc",
-			-- 			".prettierrc.cjs",
-			-- 			"package.json",
-			-- 			".git",
-			-- 		}),
-			-- 	},
-			-- },
 			formatters = {
 				prettier = {
 					args = function(self, ctx)
@@ -75,6 +60,7 @@ return {
 						-- Define the project root files to check for
 						local projectRootFiles = {
 							"package.json",
+							".git",
 						}
 
 						-- Create utility function to get the project root directory
@@ -101,14 +87,6 @@ return {
 				},
 			},
 		})
-
-		-- vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-		-- 	conform.format({
-		-- 		lsp_fallback = true,
-		-- 		async = false,
-		-- 		timeout_ms = 1000,
-		-- 	})
-		-- end, { desc = "Format file or range (in visual mode)" })
 	end,
 }
 --
