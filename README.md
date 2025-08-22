@@ -7,8 +7,6 @@ This setup includes modern plugins for productivity, coding assistance, and a cl
 
 ## 📦 Plugins Included
 
-## 📦 Plugins Included
-
 - [lazy.nvim](https://github.com/folke/lazy.nvim) – uses lazy for plugins
 - [alpha-nvim](https://github.com/goolord/alpha-nvim) – startup screen
 - [onedark.nvim](https://github.com/navarasu/onedark.nvim) – clean dark colorscheme
