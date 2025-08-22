@@ -25,6 +25,7 @@ This setup includes modern plugins for productivity, coding assistance, and a cl
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) – highlight and track TODOs
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) – syntax highlighting and parsing
 - [mason.nvim](https://github.com/williamboman/mason.nvim) – install LSPs, linters, and formatters
+- [toggleterm](https://github.com/akinsho/toggleterm.nvim) – easy way to toggle the terminal
 
 ---
 
