@@ -35,7 +35,7 @@ This setup includes modern plugins for productivity, coding assistance, and a cl
 mv ~/.config/nvim ~/.config/nvim.bak
 
 # Clone this repo
-git clone https://github.com/yourusername/your-nvim-setup ~/.config/nvim
+git clone https://github.com/sameid/sam-nvim.git ~/.config/nvim
 
 # Launch nvim
 nvim
@@ -47,7 +47,7 @@ Plugins will install automatically on first run.
 
 - Neovim 0.9+
 - git
-- A Nerd Font (for icons)
+- (A Nerd Font (for icons))[https://www.nerdfonts.com/font-downloads]
 - Node.js (for Copilot)
 
 ## 🤝 Contributing
