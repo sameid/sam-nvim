@@ -71,7 +71,10 @@ return {
 
 						-- If the project root is found and the prettier config files are found in the project root, then use the config from the project root
 						if doesProjectHavePrettierConfig(projectRoot, prettierFiles) then
-							vim.notify("No Prettier config found in the project root", vim.log.levels.WARN)
+							vim.notify(
+								"Prettier config found in the project root, using project prettier config",
+								vim.log.levels.WARN
+							)
 							return { "--stdin-filepath", "$FILENAME" }
 						end
 
