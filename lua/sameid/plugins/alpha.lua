@@ -5,6 +5,9 @@ return {
 		local alpha = require("alpha")
 		local dashboard = require("alpha.themes.dashboard")
 
+		vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#1c7eff", bold = true })
+		dashboard.section.header.opts.hl = "AlphaHeader"
+
 		-- Set header
 		dashboard.section.header.val = {
 			"                                                                 ",
