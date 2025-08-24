@@ -64,3 +64,33 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
 	end,
 })
+
+function closeAllNonEssentialBuffers()
+	local currentBuffer = vim.api.nvim_get_current_buf()
+	local allBuffers = vim.api.nvim_list_bufs()
+
+	for _, buffer in ipairs(allBuffers) do
+		if not vim.api.nvim_buf_is_loaded(buffer) then
+			goto continue
+		end
+
+		local bufferName = vim.api.nvim_buf_get_name(buffer)
+		local bufferType = vim.api.nvim_buf_get_option(buffer, "buftype")
+
+		local isCurrentBuffer = buffer == currentBuffer
+		local isTerminalBuffer = bufferType == "terminal"
+		local isNvimTreeBuffer = string.match(bufferName, "NvimTree_")
+
+		if isCurrentBuffer or isTerminalBuffer or isNvimTreeBuffer then
+			goto continue
+		end
+
+		-- Skip current buffer, terminal buffers, and NvimTree
+		pcall(vim.cmd, "bd! " .. buffer)
+
+		::continue::
+	end
+end
+
+-- Keybinding keybinding for closing all non-essential buffers and not closing the current one as well
+keymap.set("n", "<leader>bc", closeAllNonEssentialBuffers, { desc = "Close non-essential buffers" })
