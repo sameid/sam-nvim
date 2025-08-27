@@ -30,8 +30,9 @@ keymap.set("n", "<leader>wd", "<cmd>close<CR>", { desc = "Close current split" }
 -- buffer keymaps
 keymap.set("n", "<leader>bn", "<cmd>enew<CR>", { desc = "Open new buffer" }) -- open new tab
 keymap.set("n", "<leader>bd", "<cmd>bw<CR>", { desc = "Close current buffer" }) -- close current tab
-keymap.set("n", "<leader>bl", "<cmd>bn<CR>", { desc = "Go to next buffer" }) --  go to next tab
-keymap.set("n", "<leader>bh", "<cmd>bp<CR>", { desc = "Go to previous buffer" }) --  go to previous tab
+keymap.set("n", "<leader>bl", "<cmd>bn<CR>", { desc = "Go to left buffer" }) --  go to next tab
+keymap.set("n", "<leader>bh", "<cmd>bp<CR>", { desc = "Go to right buffer" }) --  go to previous tab
+keymap.set("n", "<leader>bb", "<C-o>", { desc = "Toggle back to previous buffer" }) --  go to previous tab
 
 -- Terminal Keymaps (<C-/> maps to <C-_> in normal mode)
 keymap.set("n", "<c-_>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" }) --  go to previous tab

@@ -20,10 +20,29 @@ return {
 					enable = true,
 				},
 				icons = {
+					git_placement = "after",
 					glyphs = {
 						folder = {
 							arrow_closed = "", -- arrow when folder is closed
 							arrow_open = "", -- arrow when folder is open
+						},
+						-- git = {
+						-- 	unstaged = "✗",
+						-- 	staged = "✓",
+						-- 	unmerged = "",
+						-- 	renamed = "➜",
+						-- 	untracked = "★",
+						-- 	deleted = "",
+						-- 	ignored = "◌",
+						-- },
+						git = {
+							unstaged = "",
+							staged = "",
+							unmerged = "",
+							renamed = "➜",
+							untracked = "",
+							deleted = "",
+							ignored = "◌",
 						},
 					},
 				},
