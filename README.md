@@ -54,13 +54,6 @@ More information about install neovim can be found [here](https://github.com/neo
 ### Install sameid-nvim setup
 
 ```bash
-
-# Windows Install
-choco install neovim
-
-# Or MacOS Install
-brew install neovim
-
 # Backup your existing config
 mv ~/.config/nvim ~/.config/nvim.bak
 
