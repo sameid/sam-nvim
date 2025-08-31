@@ -9,7 +9,6 @@ This setup includes modern plugins for productivity, coding assistance, and a cl
 
 - [lazy.nvim](https://github.com/folke/lazy.nvim) – uses lazy for plugins
 - [alpha-nvim](https://github.com/goolord/alpha-nvim) – startup screen
-- [onedark.nvim](https://github.com/navarasu/onedark.nvim) – clean dark colorscheme
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) – tab-like buffer management
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) – statusline
 - [which-key.nvim](https://github.com/folke/which-key.nvim) – keybinding hints
@@ -28,11 +27,40 @@ This setup includes modern plugins for productivity, coding assistance, and a cl
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) – easy way to toggle the terminal
 - [neoscroll.nvim](https://github.com/karb94/neoscroll.nvim) – just some nice scrolling animation
 
+### Theming
+
+I'm currently trying out oxocarbon, but my usual default is onedark
+
+- [onedark.nvim](https://github.com/navarasu/onedark.nvim) – clean dark colorscheme
+- [oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim) – clean oxocarbon colorscheme
+
 ---
 
 ## 🚀 Installation
 
+### Install neovim
+
 ```bash
+
+# Windows Install
+choco install neovim
+
+# Or MacOS Install
+brew install neovim
+```
+
+More information about install neovim can be found [here](https://github.com/neovim/neovim/blob/master/INSTALL.md)
+
+### Install sameid-nvim setup
+
+```bash
+
+# Windows Install
+choco install neovim
+
+# Or MacOS Install
+brew install neovim
+
 # Backup your existing config
 mv ~/.config/nvim ~/.config/nvim.bak
 
@@ -51,6 +79,11 @@ Plugins will install automatically on first run.
 - git
 - [A Nerd Font (for icons)](https://www.nerdfonts.com/font-downloads)
 - Node.js (for Copilot)
+
+## WIP
+
+- Improving which-key richness and overall key bindings to have more intuitive defaults
+- May switch out telescope with fzf-lua
 
 ## 🤝 Contributing
 
