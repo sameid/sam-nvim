@@ -53,6 +53,7 @@ return {
 		lualine.setup({
 			options = {
 				theme = my_lualine_theme,
+				-- theme = "enfocado",
 			},
 			sections = {
 				lualine_x = {
