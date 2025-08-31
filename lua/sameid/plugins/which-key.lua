@@ -1,3 +1,6 @@
+-- This plugin is a mess right now as I am trying to figure out the best groupings for the keybindings
+--
+--
 -- return {
 -- 	"folke/which-key.nvim",
 -- 	event = "VeryLazy",
