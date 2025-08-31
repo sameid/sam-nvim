@@ -42,16 +42,16 @@ return {
 				keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
 				opts.desc = "See available code actions"
-				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+				keymap.set({ "n", "v" }, "<leader>ba", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
 				opts.desc = "Smart rename"
-				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+				keymap.set("n", "<leader>br", vim.lsp.buf.rename, opts) -- smart rename
 
 				opts.desc = "Show buffer diagnostics"
-				keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+				keymap.set("n", "<leader>bI", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
 				opts.desc = "Show line diagnostics"
-				keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+				keymap.set("n", "<leader>bi", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
 				opts.desc = "Go to previous diagnostic"
 				keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -63,12 +63,11 @@ return {
 				keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
 				opts.desc = "Restart LSP"
-				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+				keymap.set("n", "<leader>bs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 			end,
 		})
 
 		-- used to enable autocompletion (assign to every lsp server config)
-		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		-- (not in youtube nvim video)
@@ -78,52 +77,46 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		-- mason_lspconfig.setup_handlers({
-		-- 	-- default handler for installed servers
-		-- 	function(server_name)
-		-- 		lspconfig[server_name].setup({
-		-- 			capabilities = capabilities,
-		-- 		})
-		-- 	end,
-		-- 	["graphql"] = function()
-		-- 		-- configure graphql language server
-		-- 		lspconfig["graphql"].setup({
-		-- 			capabilities = capabilities,
-		-- 			filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
-		-- 		})
-		-- 	end,
-		-- 	["emmet_ls"] = function()
-		-- 		-- configure emmet language server
-		-- 		lspconfig["emmet_ls"].setup({
-		-- 			capabilities = capabilities,
-		-- 			filetypes = {
-		-- 				"html",
-		-- 				"typescriptreact",
-		-- 				"javascriptreact",
-		-- 				"css",
-		-- 				"sass",
-		-- 				"scss",
-		-- 				"less",
-		-- 			},
-		-- 		})
-		-- 	end,
-		-- 	["lua_ls"] = function()
-		-- 		-- configure lua server (with special settings)
-		-- 		lspconfig["lua_ls"].setup({
-		-- 			capabilities = capabilities,
-		-- 			settings = {
-		-- 				Lua = {
-		-- 					-- make the language server recognize "vim" global
-		-- 					diagnostics = {
-		-- 						globals = { "vim" },
-		-- 					},
-		-- 					completion = {
-		-- 						callSnippet = "Replace",
-		-- 					},
-		-- 				},
-		-- 			},
-		-- 		})
-		-- 	end,
-		-- })
+		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local installedServers = mason_lspconfig.get_installed_servers()
+
+		for _, serverName in pairs(installedServers) do
+			lspconfig[serverName].setup({
+				capabilities = capabilities,
+			})
+		end
+
+		lspconfig["graphql"].setup({
+			capabilities = capabilities,
+			filetypes = { "graphql", "gql", "typescriptreact", "javascriptreact" },
+		})
+
+		lspconfig["emmet_ls"].setup({
+			capabilities = capabilities,
+			filetypes = {
+				"html",
+				"typescriptreact",
+				"javascriptreact",
+				"css",
+				"sass",
+				"scss",
+				"less",
+			},
+		})
+
+		lspconfig["lua_ls"].setup({
+			capabilities = capabilities,
+			settings = {
+				Lua = {
+					-- make the language server recognize "vim" global
+					diagnostics = {
+						globals = { "vim" },
+					},
+					completion = {
+						callSnippet = "Replace",
+					},
+				},
+			},
+		})
 	end,
 }
