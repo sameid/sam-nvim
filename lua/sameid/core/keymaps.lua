@@ -26,6 +26,9 @@ keymap.set("n", "<leader>bl", "<cmd>bn<CR>", { desc = "Go to left buffer" }) -- 
 keymap.set("n", "<leader>bh", "<cmd>bp<CR>", { desc = "Go to right buffer" }) --  go to previous tab
 keymap.set("n", "<leader>bb", "<C-o>", { desc = "Toggle back to previous buffer" }) --  go to previous tab
 
+-- register keymaps
+-- keymap.set("n", "<leader>r", '"', { desc = "Toggle back to previous buffer" }) --  go to previous tab
+
 -- Terminal Keymaps (<C-/> maps to <C-_> in normal mode)
 keymap.set("n", "<c-_>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" }) --  go to previous tab
 keymap.set("n", "<c-/>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" }) --  go to previous tab
@@ -47,7 +50,7 @@ keymap.set("i", "<Tab>", function()
 end, { expr = true, silent = true, desc = "Copilot Accept (safe)" })
 
 -- Insert 3 lines and go to middle (zz))
-keymap.set("n", "zz", "o<CR><CR><Esc>kcc", { desc = "Insert 3 lines and go to middle" })
+keymap.set("n", "zz", "o<CR><Esc>ko", { desc = "Insert 3 lines and go to middle" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("highlight_yank", {}),

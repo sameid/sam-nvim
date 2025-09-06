@@ -23,6 +23,7 @@ This setup includes modern plugins for productivity, coding assistance, and a cl
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) – autocompletion
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) – highlight and track TODOs
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) – syntax highlighting and parsing
+- [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) – Auto generate closing tags
 - [mason.nvim](https://github.com/williamboman/mason.nvim) – install LSPs, linters, and formatters
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) – easy way to toggle the terminal
 - [neoscroll.nvim](https://github.com/karb94/neoscroll.nvim) – just some nice scrolling animation
