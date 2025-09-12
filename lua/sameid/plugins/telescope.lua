@@ -18,7 +18,7 @@ return {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
 						["<C-j>"] = actions.move_selection_next, -- move to next result
-						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
 					},
 				},
 			},
@@ -33,7 +33,8 @@ return {
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		keymap.set("n", "<leader>/", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-		keymap.set("n", "<leader>fg", "<cmd>Telescope git_status<cr>", { desc = "Find git hunks" })
+		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find Todos" })
+		keymap.set("n", "<leader>fg", "<cmd>Telescope git_status<cr>", { desc = "Find Git Hunks" })
+		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
 	end,
 }

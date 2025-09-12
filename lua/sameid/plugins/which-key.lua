@@ -1,20 +1,3 @@
--- This plugin is a mess right now as I am trying to figure out the best groupings for the keybindings
---
---
--- return {
--- 	"folke/which-key.nvim",
--- 	event = "VeryLazy",
--- 	init = function()
--- 		vim.o.timeout = true
--- 		vim.o.timeoutlen = 500
--- 	end,
--- 	opts = {
--- 		-- your configuration comes here
--- 		preset = "helix",
--- 		-- or leave it empty to use the default settings
--- 		-- refer to the configuration section below
--- 	},
--- }
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
@@ -24,29 +7,26 @@ return {
 	end,
 	opts = {
 		preset = "helix",
-		-- `opts` goes directly into require("which-key").setup()
-		-- plugins = {
-		-- 	spelling = true, -- example plugin setting
-		-- },
-		-- defaults = {
-		-- 	-- your keymap groups
-		-- 	-- { "<leader>w", group = "+windows" },
-		-- 	-- { "<leader>b", group = "+buffers" },
-		-- 	-- { "<leader>f", group = "+find" },
-		-- 	-- { "<leader>e", group = "+explorer" },
-		-- 	-- { "<leader>g", group = "+git" },
-		--
-		-- 	["<leader>w"] = { name = "+windows" },
-		-- 	["<leader>b"] = { name = "+buffers" },
-		-- 	["<leader>f"] = { name = "+find" },
-		-- 	["<leader>e"] = { name = "+explorer" },
-		-- 	["<leader>g"] = { name = "+git" },
-		-- },
+
+		icons = {
+			mappings = false,
+			groups = false,
+		},
 	},
-	-- config = function(_, opts)
-	-- 	local wk = require("which-key")
-	-- 	wk.setup(opts)
-	-- 	-- Register the group labels
-	-- 	wk.register(opts.defaults)
-	-- end,
+	config = function(_, opts)
+		local wk = require("which-key")
+		wk.setup(opts)
+		-- Register the group labels
+		-- wk.register({
+		-- 	f = { name = "+Windows" },
+		-- })
+		wk.add({
+			{ "<leader>w", group = "windows" },
+			{ "<leader>b", group = "buffers" },
+			{ "<leader>f", group = "find" },
+			{ "<leader>e", group = "explorer" },
+			{ "<leader>g", group = "git" },
+			{ "<leader>l", group = "LSP" },
+		})
+	end,
 }
