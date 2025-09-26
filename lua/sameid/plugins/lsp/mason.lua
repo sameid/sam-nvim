@@ -34,6 +34,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"pyright",
+				"clangd",
 			},
 		})
 
@@ -43,6 +44,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
+				"clang-format", -- c/c++ formatter
 			},
 		})
 	end,

@@ -29,6 +29,9 @@ return {
 				liquid = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
+				arduino = { "clang-format" },
 			},
 			format_on_save = {
 				lsp_fallback = false,
@@ -87,6 +90,13 @@ return {
 							"160",
 						}
 					end,
+				},
+				clang_format = {
+					args = {
+
+						"--style",
+						"{BasedOnStyle: llvm, UseTab: Always, IndentWidth: 4, TabWidth: 4}",
+					},
 				},
 			},
 		})

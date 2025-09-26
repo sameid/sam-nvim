@@ -6,7 +6,7 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps -------------------
 
 -- use jk to exit insert mode
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+-- keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
@@ -90,3 +90,4 @@ end
 
 -- Keybinding keybinding for closing all non-essential buffers and not closing the current one as well
 keymap.set("n", "<leader>bc", closeAllNonEssentialBuffers, { desc = "Close non-essential buffers" })
+keymap.set("t", "jk", [[<C-\><C-n>]], { noremap = true })
