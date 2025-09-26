@@ -1,4 +1,4 @@
-# sam-nvim (A simple neovim config)
+# sam-nvim (a Simple And Minimal neovim config)
 
 A minimal yet powerful Neovim configuration that just works. Made for the uninitiated by the uninitiated.  
 This setup includes modern plugins for productivity, coding assistance, and a clean UI.
@@ -50,9 +50,9 @@ choco install neovim
 brew install neovim
 ```
 
-More information about install neovim can be found [here](https://github.com/neovim/neovim/blob/master/INSTALL.md)
+More information about how to install neovim can be found [here](https://github.com/neovim/neovim/blob/master/INSTALL.md)
 
-### Install sameid-nvim setup
+### Install sam-nvim setup
 
 ```bash
 # Backup your existing config
