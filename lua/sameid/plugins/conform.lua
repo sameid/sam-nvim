@@ -29,7 +29,7 @@ return {
 				liquid = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
-				c = { "clang-format" },
+				c = { "our_clang_format" },
 				cpp = { "clang-format" },
 				arduino = { "clang-format" },
 			},
@@ -91,11 +91,10 @@ return {
 						}
 					end,
 				},
-				clang_format = {
+				our_clang_format = {
+					command = "clang-format",
 					args = {
-
-						"--style",
-						"{BasedOnStyle: llvm, UseTab: Always, IndentWidth: 4, TabWidth: 4}",
+						"--style={BasedOnStyle: llvm, UseTab: Always, IndentWidth: 4, TabWidth: 4, ColumnLimit: 160 }",
 					},
 				},
 			},

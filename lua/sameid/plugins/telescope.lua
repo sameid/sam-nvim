@@ -36,5 +36,11 @@ return {
 		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find Todos" })
 		keymap.set("n", "<leader>fg", "<cmd>Telescope git_status<cr>", { desc = "Find Git Hunks" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
+		keymap.set(
+			"n",
+			"<leader>fi",
+			"<cmd>Telescope current_buffer_fuzzy_find<cr>",
+			{ desc = "Find strings in current buffer" }
+		)
 	end,
 }
