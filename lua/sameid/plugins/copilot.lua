@@ -15,5 +15,6 @@ return {
 			},
 		},
 		panel = { enabled = false }, -- optional: inline only
+		copilot_node_command = vim.fn.expand("~/.nvm/versions/node/v22.19.0/bin/node"),
 	},
 }

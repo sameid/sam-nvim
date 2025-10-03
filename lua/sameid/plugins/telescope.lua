@@ -6,6 +6,7 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
 		"folke/todo-comments.nvim",
+		"camgraff/telescope-tmux.nvim",
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -25,6 +26,7 @@ return {
 		})
 
 		telescope.load_extension("fzf")
+		telescope.load_extension("tmux")
 
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
@@ -42,5 +44,7 @@ return {
 			"<cmd>Telescope current_buffer_fuzzy_find<cr>",
 			{ desc = "Find strings in current buffer" }
 		)
+		keymap.set("n", "<leader>ts", "<cmd>Telescope tmux sessions<cr>", { desc = "Find tmux sessions" })
+		keymap.set("n", "<leader>tw", "<cmd>Telescope tmux windows<cr>", { desc = "Find tmux windows" })
 	end,
 }
