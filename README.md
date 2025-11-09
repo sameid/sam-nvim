@@ -30,13 +30,13 @@ This setup includes modern plugins for productivity, coding assistance, and a cl
 - [mason.nvim](https://github.com/williamboman/mason.nvim) – install LSPs, linters, and formatters
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) – easy way to toggle the terminal
 - [neoscroll.nvim](https://github.com/karb94/neoscroll.nvim) – just some nice scrolling animation
+- [flash.nvim](https://github.com/folke/flash.nvim) - quick code navigation
 
 ### Theming
 
-I'm currently trying out oxocarbon, but my usual default is onedark
+I'm currently trying out other options, but my usual default is tokyodark
 
-- [onedark.nvim](https://github.com/navarasu/onedark.nvim) – clean dark colorscheme
-- [oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim) – clean oxocarbon colorscheme
+- [tokyodark.nvim](https://github.com/tiagovla/tokyodark.nvim) – clean dark colorscheme
 
 ---
 

@@ -13,7 +13,7 @@ return {
 
 		local neoscroll = require("neoscroll")
 		local isSilent = true
-		local scrollDuration = 50
+		local scrollDuration = 25
 
 		-- Add your own smooth scroll bindings
 		vim.keymap.set("n", "<S-Up>", function()

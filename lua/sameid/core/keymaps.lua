@@ -15,9 +15,12 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>wn", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
 keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to previous window" }) -- split window vertically
 keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to next window" }) -- split window vertically
+keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Go to bottom window" }) -- split window vertically
+keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Go to top window" }) -- split window vertically
 -- keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
 -- keymap.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>wd", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
+keymap.set("n", "<leader>wq", "<cmd>copen<CR>", { desc = "Go to quickfix window" }) -- close current split window
 
 -- buffer keymaps
 keymap.set("n", "<leader>bn", "<cmd>enew<CR>", { desc = "Open new buffer" }) -- open new tab
@@ -25,6 +28,7 @@ keymap.set("n", "<leader>bd", "<cmd>bw<CR>", { desc = "Close current buffer" }) 
 keymap.set("n", "<leader>bl", "<cmd>bn<CR>", { desc = "Go to left buffer" }) --  go to next tab
 keymap.set("n", "<leader>bh", "<cmd>bp<CR>", { desc = "Go to right buffer" }) --  go to previous tab
 keymap.set("n", "<leader>bb", "<C-o>", { desc = "Toggle back to previous buffer" }) --  go to previous tab
+keymap.set("n", "<leader>br", "<cmd>e!<CR>", { desc = "Refresh current buffer" }) --  go to previous tab
 
 -- register keymaps
 -- keymap.set("n", "<leader>r", '"', { desc = "Toggle back to previous buffer" }) --  go to previous tab
