@@ -27,6 +27,7 @@ return {
 			{ "<leader>e", group = "explorer" },
 			{ "<leader>g", group = "git" },
 			{ "<leader>l", group = "LSP" },
+			{ "<leader>t", group = "tmux" },
 		})
 	end,
 }

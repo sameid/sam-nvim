@@ -32,6 +32,7 @@ return {
 				c = { "our_clang_format" },
 				cpp = { "clang-format" },
 				arduino = { "clang-format" },
+				openscad = { "our_clang_format" },
 			},
 			format_on_save = {
 				lsp_fallback = false,

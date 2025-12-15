@@ -27,7 +27,7 @@ keymap.set("n", "<leader>bn", "<cmd>enew<CR>", { desc = "Open new buffer" }) -- 
 keymap.set("n", "<leader>bd", "<cmd>bw<CR>", { desc = "Close current buffer" }) -- close current tab
 keymap.set("n", "<leader>bl", "<cmd>bn<CR>", { desc = "Go to left buffer" }) --  go to next tab
 keymap.set("n", "<leader>bh", "<cmd>bp<CR>", { desc = "Go to right buffer" }) --  go to previous tab
-keymap.set("n", "<leader>bb", "<C-o>", { desc = "Toggle back to previous buffer" }) --  go to previous tab
+keymap.set("n", "<leader>j", "<C-6>", { desc = "Toggle back to previous buffer" }) --  go to previous tab
 keymap.set("n", "<leader>br", "<cmd>e!<CR>", { desc = "Refresh current buffer" }) --  go to previous tab
 
 -- register keymaps

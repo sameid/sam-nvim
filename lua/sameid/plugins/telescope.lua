@@ -36,7 +36,6 @@ return {
 		keymap.set("n", "<leader>/", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 		keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find Todos" })
-		keymap.set("n", "<leader>fg", "<cmd>Telescope git_status<cr>", { desc = "Find Git Hunks" })
 		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find Buffers" })
 		keymap.set(
 			"n",
@@ -46,5 +45,6 @@ return {
 		)
 		keymap.set("n", "<leader>ts", "<cmd>Telescope tmux sessions<cr>", { desc = "Find tmux sessions" })
 		keymap.set("n", "<leader>tw", "<cmd>Telescope tmux windows<cr>", { desc = "Find tmux windows" })
+		keymap.set("n", "<leader>gg", "<cmd>Telescope git_status<cr>", { desc = "Find Git Hunks" })
 	end,
 }
