@@ -30,7 +30,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				c = { "our_clang_format" },
-				cpp = { "clang-format" },
+				cpp = { "our_clang_format" },
 				arduino = { "clang-format" },
 				openscad = { "our_clang_format" },
 			},
