@@ -1,24 +1,25 @@
-return {
-	"zbirenbaum/copilot.lua",
-	cmd = "Copilot",
-	event = "InsertEnter",
-	opts = {
-		suggestion = {
-			enabled = true,
-			auto_trigger = true, -- show inline suggestions automatically
-			debounce = 75,
-			keymap = {
-				accept = "<M-l>", -- accept suggestion
-				next = "<M-]>", -- next suggestion
-				prev = "<M-[>", -- previous suggestion
-				dismiss = "<C-]>", -- dismiss
-			},
-		},
-		filetypes = {
-			["*"] = true,
-			txt = true,
-		},
-		panel = { enabled = false }, -- optional: inline only
-		copilot_node_command = vim.fn.expand("~/.nvm/versions/node/v22.19.0/bin/node"),
-	},
-}
+return {}
+-- return {
+-- 	"zbirenbaum/copilot.lua",
+-- 	cmd = "Copilot",
+-- 	event = "InsertEnter",
+-- 	opts = {
+-- 		suggestion = {
+-- 			enabled = true,
+-- 			auto_trigger = true, -- show inline suggestions automatically
+-- 			debounce = 75,
+-- 			keymap = {
+-- 				accept = "<M-l>", -- accept suggestion
+-- 				next = "<M-]>", -- next suggestion
+-- 				prev = "<M-[>", -- previous suggestion
+-- 				dismiss = "<C-]>", -- dismiss
+-- 			},
+-- 		},
+-- 		filetypes = {
+-- 			["*"] = true,
+-- 			txt = true,
+-- 		},
+-- 		panel = { enabled = false }, -- optional: inline only
+-- 		copilot_node_command = vim.fn.expand("~/.nvm/versions/node/v22.19.0/bin/node"),
+-- 	},
+-- }
